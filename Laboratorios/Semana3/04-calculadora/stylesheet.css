@@ -1,0 +1,74 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f4f4f4;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Calculadora container */
+#calculadora {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  width: 320px;
+}
+
+/* Display */
+.display {
+  margin-bottom: 20px;
+}
+
+.display input {
+  width: 100%;
+  padding: 16px;
+  font-size: 1.5rem;
+  text-align: right;
+  border: none;
+  border-radius: 8px;
+  background-color: #f0f0f0;
+}
+
+/* Botões */
+#botoes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+#botoes button {
+  padding: 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #e0e0e0;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#botoes button:hover {
+  background-color: #d0d0d0;
+}
+
+#botoes button:active {
+  transform: scale(0.95);
+}
+
+/* Operadores e botões especiais */
+#botoes button:nth-last-child(-n + 5) {
+  background-color: #4caf50;
+  color: white;
+}
+
+#botoes button:nth-last-child(-n + 4):hover {
+  background-color: #43a047;
+}
